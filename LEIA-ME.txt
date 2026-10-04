@@ -1,0 +1,18 @@
+DAVI & MARIA — 1 ANO
+========================
+
+Data do namoro: 04/10/2025
+Primeiro aniversário: 04/10/2026
+Música: Ainda Bem — Vanessa da Mata
+
+COMO ABRIR:
+1. Extraia este ZIP.
+2. Abra a pasta no VS Code.
+3. Abra o index.html no navegador ou use Live Server.
+
+OBSERVAÇÃO:
+A capa do álbum é carregada por uma imagem externa no endereço da página. Assim, o site precisa de internet para mostrar a capa.
+O botão "Ouvir Ainda Bem" abre o vídeo oficial no YouTube em uma nova aba.
+
+Fotos:
+Todas as 11 fotos enviadas nesta conversa estão na pasta /fotos.

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b71945">
+<title>Davi & Maria — 1 ano</title>
+<meta name="description" content="Uma pequena parte da nossa história. Davi & Maria — 04.10.2025">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --wine:#8f1637; --red:#c61f4b; --rose:#f5d8e1; --soft:#fff7f9;
+  --ink:#24171b; --muted:#765f66; --white:#fff; --line:#e8c8d1;
+  --shadow:0 24px 70px rgba(96,17,43,.13);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--soft);color:var(--ink);overflow-x:hidden}
+::selection{background:#e9a9bc;color:#511025}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+.serif{font-family:"Cormorant Garamond",serif}
+.kicker{text-transform:uppercase;letter-spacing:.24em;font-size:11px;font-weight:600;color:var(--red)}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* Floating details */
+.heart{position:fixed;z-index:3;pointer-events:none;color:#d02b57;opacity:.16;font-size:22px;animation:float 7s linear infinite}
+.h1{left:5%;top:24%;animation-delay:-2s}.h2{right:7%;top:58%;animation-delay:-5s}.h3{left:13%;bottom:10%;animation-delay:-4s}
+@keyframes float{0%{transform:translateY(20px) rotate(-10deg);opacity:0}15%{opacity:.16}85%{opacity:.16}100%{transform:translateY(-120px) rotate(20deg);opacity:0}}
+
+/* Hero */
+.hero{min-height:100svh;display:grid;place-items:center;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 20% 20%,#ffdce7 0,transparent 30%),
+ radial-gradient(circle at 90% 30%,#f4c4d3 0,transparent 28%),
+ linear-gradient(135deg,#fff 0%,#fff6f8 52%,#fbe2e9 100%)}
+.hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(143,22,55,.12);border-radius:50%;right:-230px;bottom:-230px;box-shadow:0 0 0 70px rgba(198,31,75,.025),0 0 0 140px rgba(198,31,75,.02)}
+.hero-inner{position:relative;z-index:1;text-align:center;padding:70px 0}
+.hero-top{display:flex;justify-content:center;align-items:center;gap:14px;margin-bottom:24px}
+.dot{width:7px;height:7px;background:var(--red);border-radius:50%}
+.hero h1{font-size:clamp(68px,13vw,160px);line-height:.72;font-weight:500;letter-spacing:-.055em;color:var(--wine)}
+.hero h1 span{display:block;font-size:.54em;color:#d3496e;letter-spacing:-.03em;margin-top:28px}
+.hero-date{margin:36px auto 0;display:inline-flex;align-items:center;gap:15px;padding:12px 18px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.65);backdrop-filter:blur(10px);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.hero-note{max-width:600px;margin:32px auto 0;font-family:"Cormorant Garamond",serif;font-size:clamp(23px,3vw,32px);line-height:1.15;color:#4d3038}
+.scroll{margin-top:70px;font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted)}
+.scroll:after{content:"";display:block;width:1px;height:45px;background:var(--red);margin:12px auto 0;opacity:.5}
+
+/* Intro */
+.section{padding:120px 0}
+.intro{background:#fff}
+.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.intro h2,.section-title{font-family:"Cormorant Garamond",serif;font-size:clamp(48px,6vw,78px);line-height:.92;font-weight:500;color:var(--wine)}
+.intro p{font-size:16px;line-height:1.9;color:var(--muted);max-width:560px;margin-top:26px}
+.quote{margin-top:35px;padding:26px 0 0 24px;border-left:2px solid var(--red);font-family:"Cormorant Garamond",serif;font-size:27px;line-height:1.15;color:#482b33}
+.intro-photo{position:relative}
+.intro-photo img{height:580px;width:100%;object-fit:cover;border-radius:260px 260px 24px 24px;box-shadow:var(--shadow)}
+.photo-tag{position:absolute;bottom:24px;left:24px;background:#fff;padding:14px 18px;border-radius:14px;box-shadow:0 12px 35px rgba(0,0,0,.1);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+
+/* Music */
+.music{background:#fff8fa}
+.music-card{margin-top:50px;background:linear-gradient(125deg,#5e0d27,#a71643);border-radius:32px;padding:35px;display:grid;grid-template-columns:330px 1fr;gap:50px;align-items:center;color:#fff;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.music-card:after{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(255,255,255,.14);border-radius:50%;right:-190px;top:-190px}
+.album-cover{width:100%;aspect-ratio:1;border-radius:20px;object-fit:cover;box-shadow:0 22px 50px rgba(0,0,0,.25);position:relative;z-index:1}
+.music-info{position:relative;z-index:1}
+.music-info h3{font-family:"Cormorant Garamond",serif;font-size:58px;line-height:.95;font-weight:500}
+.music-info .artist{margin-top:10px;color:#f6cdd9;font-size:14px}
+.music-info p{margin-top:25px;line-height:1.75;color:#f7e5ea;max-width:570px}
+.music-btn{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:#fff;color:var(--wine);padding:14px 19px;border-radius:999px;font-weight:600;font-size:13px;transition:.25s}
+.music-btn:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+.music-caption{margin-top:16px;font-size:11px;color:#e9b8c6;letter-spacing:.08em}
+
+/* Timeline */
+.timeline-section{background:#fff}
+.timeline-head{max-width:700px}
+.timeline-head p{margin-top:20px;color:var(--muted);line-height:1.8}
+.timeline{position:relative;margin-top:80px;padding:10px 0}
+.timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(var(--red),#efc8d4);transform:translateX(-50%)}
+.event{width:50%;position:relative;padding:0 58px 100px}
+.event:nth-child(odd){margin-left:0;text-align:right}
+.event:nth-child(even){margin-left:50%;text-align:left}
+.event-dot{position:absolute;top:7px;width:15px;height:15px;background:#fff;border:4px solid var(--red);border-radius:50%;z-index:2;box-shadow:0 0 0 7px #fff}
+.event:nth-child(odd) .event-dot{right:-7px}.event:nth-child(even) .event-dot{left:-7px}
+.event-date{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);font-weight:600}
+.event h3{font-family:"Cormorant Garamond",serif;font-size:42px;line-height:.95;font-weight:600;color:var(--wine);margin-top:10px}
+.event p{margin-top:14px;color:var(--muted);line-height:1.8;font-size:14px}
+.event-photo{margin-top:25px;width:min(100%,360px);height:360px;object-fit:cover;border-radius:18px;box-shadow:0 18px 50px rgba(87,16,39,.12)}
+.event:nth-child(odd) .event-photo{margin-left:auto}
+.event:nth-child(even) .event-photo{margin-right:auto}
+
+/* Gallery */
+.gallery{background:linear-gradient(#fff7f9,#fff)}
+.gallery-head{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.gallery-head p{max-width:420px;color:var(--muted);line-height:1.7}
+.gallery-grid{margin-top:55px;display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.gallery-item{position:relative;overflow:hidden;border-radius:18px;cursor:pointer;background:#f1dbe2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.gallery-item:hover img{transform:scale(1.06)}
+.g1{grid-column:span 5;height:500px}.g2{grid-column:span 3;height:240px}.g3{grid-column:span 4;height:240px}
+.g4{grid-column:span 3;height:245px}.g5{grid-column:span 4;height:245px}.g6{grid-column:span 5;height:500px;grid-row:span 2}
+.g7{grid-column:span 4;height:245px}.g8{grid-column:span 3;height:245px}.g9{grid-column:span 5;height:245px}.g10{grid-column:span 3;height:245px}.g11{grid-column:span 4;height:245px}
+.gallery-label{position:absolute;left:14px;bottom:14px;background:rgba(255,255,255,.88);padding:7px 10px;border-radius:999px;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--wine)}
+
+/* Letter */
+.letter{background:#fff;padding-bottom:150px}
+.letter-card{max-width:850px;margin:50px auto 0;padding:65px clamp(28px,7vw,90px);background:#fff;border:1px solid #efd7de;box-shadow:var(--shadow);border-radius:4px;position:relative}
+.letter-card:before{content:"♥";position:absolute;top:23px;left:50%;transform:translateX(-50%);color:#d22a57;font-size:18px}
+.letter-card p{font-family:"Cormorant Garamond",serif;font-size:24px;line-height:1.55;color:#4b3038;margin-bottom:20px}
+.signature{margin-top:35px;font-family:"Cormorant Garamond",serif;font-size:36px;color:var(--wine)}
+
+/* Footer */
+.footer{background:#5b0d27;color:#fff;padding:90px 0;text-align:center}
+.footer .big{font-family:"Cormorant Garamond",serif;font-size:clamp(52px,8vw,100px);font-weight:500;line-height:.9}
+.footer p{margin-top:24px;color:#e9becb}
+.footer .mini{margin-top:45px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#d999ad}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(26,5,12,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:25px}
+.lightbox.open{display:flex}
+.lightbox img{max-height:90vh;max-width:92vw;object-fit:contain;border-radius:12px}
+.close{position:absolute;right:25px;top:20px;color:#fff;font-size:35px;cursor:pointer;font-weight:300}
+.music-float{position:fixed;right:18px;bottom:18px;z-index:20;background:#fff;border:1px solid #edc7d2;color:var(--wine);padding:12px 15px;border-radius:999px;box-shadow:0 12px 35px rgba(80,12,35,.16);font-size:12px;font-weight:600}
+
+/* Responsive */
+@media(max-width:850px){
+ .container{width:min(100% - 28px,680px)}
+ .section{padding:80px 0}
+ .intro-grid{grid-template-columns:1fr;gap:45px}.intro-photo img{height:480px}
+ .music-card{grid-template-columns:1fr;padding:22px;gap:28px}.album-cover{max-width:360px;margin:auto}
+ .music-info h3{font-size:48px}
+ .timeline:before{left:10px}.event,.event:nth-child(even){width:100%;margin-left:0;text-align:left;padding:0 0 75px 42px}
+ .event:nth-child(odd) .event-dot,.event:nth-child(even) .event-dot{left:3px;right:auto}
+ .event:nth-child(odd) .event-photo{margin-left:0}
+ .event-photo{height:300px;width:100%}
+ .gallery-grid{grid-template-columns:1fr 1fr;gap:10px}.gallery-item,.g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10,.g11{grid-column:span 1;height:260px;grid-row:auto}.g1,.g6{height:390px}
+ .gallery-head{display:block}.gallery-head p{margin-top:18px}
+ .letter-card{padding:55px 25px}.letter-card p{font-size:21px}
+}
+@media(max-width:480px){
+ .hero h1{font-size:76px}.hero h1 span{margin-top:18px}.hero-note{font-size:23px}.scroll{margin-top:55px}
+ .intro-photo img{height:390px}.event h3{font-size:36px}
+ .gallery-grid{grid-template-columns:1fr}.gallery-item,.g1,.g2,.g3,.g4,.g5,.g6,.g7,.g8,.g9,.g10,.g11{height:390px}
+ .music-info h3{font-size:43px}
+}
+</style>
+</head>
+<body>
+
+<div class="heart h1">♥</div><div class="heart h2">♥</div><div class="heart h3">♥</div>
+
+<section class="hero">
+  <div class="hero-inner container reveal">
+    <div class="hero-top"><span class="dot"></span><span class="kicker">uma história que ainda está começando</span><span class="dot"></span></div>
+    <h1 class="serif">Davi <span>&</span> Maria</h1>
+    <div class="hero-date">04.10.2025 &nbsp;—&nbsp; 04.10.2026</div>
+    <p class="hero-note">“Entre tantas pessoas, tantos caminhos e tantos momentos… ainda bem que foi você.”</p>
+    <div class="scroll">desce devagar</div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container intro-grid">
+    <div class="reveal">
+      <span class="kicker">antes de ser namoro</span>
+      <h2>Primeiro veio a amizade.<br>Depois veio nós.</h2>
+      <p>Antes do dia 4 de outubro de 2025, já existia uma história acontecendo. Conversas, brincadeiras, momentos e aquela proximidade que, com o tempo, acabou virando algo maior.</p>
+      <div class="quote">“Talvez a nossa história tenha começado muito antes de a gente perceber.”</div>
+    </div>
+    <div class="intro-photo reveal">
+      <img src="fotos/foto-8.png" alt="Davi e Maria juntos">
+      <div class="photo-tag">a gente, do nosso jeito</div>
+    </div>
+  </div>
+</section>
+
+<section class="section music">
+  <div class="container reveal">
+    <span class="kicker">a nossa música</span>
+    <h2 class="section-title">Tem uma música que sempre vai lembrar você.</h2>
+    <div class="music-card">
+      <img class="album-cover" src="https://thexic.wordpress.com/wp-content/uploads/2008/02/vanessadamata-essabonecatemmanual.thumbnail.jpg?w=510" alt="Capa do álbum Essa Boneca Tem Manual, de Vanessa da Mata">
+      <div class="music-info">
+        <div class="kicker" style="color:#f2a8bd">faixa especial</div>
+        <h3>Ainda Bem</h3>
+        <div class="artist">Vanessa da Mata</div>
+        <p>Não precisava ser qualquer música. Tinha que ser uma que tivesse a nossa cara. E, de algum jeito, “Ainda Bem” acabou virando a trilha sonora de nós dois.</p>
+        <a class="music-btn" href="https://www.youtube.com/watch?v=kenOHjdUK4U" target="_blank" rel="noopener">▶ &nbsp; Ouvir “Ainda Bem”</a>
+        <div class="music-caption">a música abre em uma nova aba</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section timeline-section">
+  <div class="container">
+    <div class="timeline-head reveal">
+      <span class="kicker">a nossa história</span>
+      <h2 class="section-title">Um ano inteiro<br>em capítulos.</h2>
+      <p>Nem tudo cabe em fotografia. Então esta linha do tempo guarda aquilo que dá para transformar em palavras: os começos, os meses, as fases e o que continuou sendo importante em todos eles.</p>
+    </div>
+
+    <div class="timeline">
+      <article class="event reveal">
+        <span class="event-dot"></span><div class="event-date">antes de 04.10.2025</div>
+        <h3>Quando éramos amigos</h3>
+        <p>Antes de existir “nós” como casal, já existia uma amizade. E talvez essa seja uma das partes mais bonitas da nossa história.</p>
+        <img class="event-photo" src="fotos/foto-3.png" alt="Davi e Maria juntos antes do namoro">
+      </article>
+
+      <article class="event reveal">
+        <span class="event-dot"></span><div class="event-date">04 de outubro de 2025</div>
+        <h3>O dia em que tudo mudou</h3>
+        <p>Foi aqui que a amizade ganhou outro nome. 04.10.2025: o começo oficial da nossa história como namorados.</p>
+        <img class="event-photo" src="fotos/foto-5.png" alt="Davi e Maria juntos">
+      </article>
+
+      <article class="event reveal">
+        <span class="event-dot"></span><div class="event-date">1 mês</div>
+        <h3>Um mês de “nós”</h3>
+        <p>O primeiro mês. Ainda descobrindo o jeito de cada um, colecionando pequenas memórias e percebendo que aquilo tinha futuro.</p>
+        <img class="event-photo" src="fotos/foto-1.png" alt="Davi e Maria">
+      </article>
+
+      <article class="event reveal">
+        <span class="event-dot"></span><div class="event-date">6 meses</div>
+        <h3>Metade do primeiro ano</h3>
+        <p>Seis meses de histórias que ninguém de fora consegue entender completamente — porque só nós dois sabemos o significado de cada detalhe.</p>
+        <img class="event-photo" src="fotos/foto-6.png" alt="Davi beijando Maria">
+      </article>
+
+      <article class="event reveal">
+        <span class="event-dot"></span><div class="event-date">8 meses</div>
+        <h3>O amor virando rotina boa</h3>
+        <p>O tempo passou, mas a vontade de estar perto continuou. E é bonito quando alguém começa a fazer parte dos dias comuns.</p>
+        <img class="event-photo" src="fotos/foto-11.png" alt="Davi e Maria em um momento juntos">
+      </article>
+
+      <article class="event reveal">
+        <span class="event-dot"></span><div class="event-date">10 meses</div>
+        <h3>Quase um ano</h3>
+        <p>Já dava para olhar para trás e perceber quanta coisa tinha acontecido. E, mesmo assim, ainda parecia que faltava muito para viver.</p>
+        <img class="event-photo" src="fotos/foto-10.png" alt="Davi e Maria em uma comemoração">
+      </article>
+
+      <article class="event reveal">
+        <span class="event-dot"></span><div class="event-date">04 de outubro de 2026</div>
+        <h3>1 ano.</h3>
+        <p>Hoje. Um ano desde que a gente decidiu chamar isso de namoro. E, se eu pudesse voltar para aquele dia, escolheria começar tudo de novo.</p>
+        <img class="event-photo" src="fotos/foto-9.png" alt="Davi e Maria">
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section gallery">
+  <div class="container">
+    <div class="gallery-head reveal">
+      <div><span class="kicker">nós em fotografias</span><h2 class="section-title">Alguns dos<br>nossos momentos.</h2></div>
+      <p>Clique nas fotos. Algumas são bonitas, outras são completamente nossas — e justamente por isso todas merecem estar aqui.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item g1"><img src="fotos/foto-11.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">um beijo</span></div>
+      <div class="gallery-item g2"><img src="fotos/foto-1.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">nós</span></div>
+      <div class="gallery-item g3"><img src="fotos/foto-6.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">cotidiano</span></div>
+      <div class="gallery-item g4"><img src="fotos/foto-2.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">pertinho</span></div>
+      <div class="gallery-item g5"><img src="fotos/foto-3.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">começo</span></div>
+      <div class="gallery-item g6"><img src="fotos/foto-10.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">um momento</span></div>
+      <div class="gallery-item g7"><img src="fotos/foto-4.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">sem filtro</span></div>
+      <div class="gallery-item g8"><img src="fotos/foto-8.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">nossa versão</span></div>
+      <div class="gallery-item g9"><img src="fotos/foto-5.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">memória</span></div>
+      <div class="gallery-item g10"><img src="fotos/foto-7.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">do nosso jeito</span></div>
+      <div class="gallery-item g11"><img src="fotos/foto-9.png" alt="Davi e Maria" loading="lazy"><span class="gallery-label">amor</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section letter">
+  <div class="container reveal">
+    <span class="kicker" style="display:block;text-align:center">para você</span>
+    <div class="letter-card">
+      <p>Maria,</p>
+      <p>se eu tivesse que resumir esse primeiro ano, eu provavelmente não conseguiria. Tem coisa demais guardada em cada mês, em cada foto, em cada conversa e em cada momento que só nós dois entendemos.</p>
+      <p>Você entrou na minha vida primeiro como amiga, e talvez por isso eu goste tanto da nossa história. Antes de ser namoro, já existia carinho, confiança e vontade de estar perto.</p>
+      <p>Hoje, olhando para tudo que a gente viveu, eu só consigo agradecer. Pelos momentos bons, pelas risadas, pelos abraços, pelas nossas brincadeiras e até pelas fases que fizeram a gente aprender um com o outro.</p>
+      <p>Eu não quero que esse site seja só uma lembrança de um ano. Quero que ele seja o primeiro capítulo de muitos outros. Porque eu ainda quero conhecer muitos lugares com você, viver muitas fases, tirar muitas fotos e olhar para trás daqui a alguns anos pensando: “ainda bem que foi a gente”.</p>
+      <p>Feliz 1 ano, minha princesa. Eu te amo.</p>
+      <div class="signature">Davi ♥</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="big">Ainda bem<br>que é você.</div>
+    <p>04.10.2025 → ∞</p>
+    <div class="mini">Davi & Maria · 1 ano</div>
+  </div>
+</footer>
+
+<a class="music-float" href="https://www.youtube.com/watch?v=kenOHjdUK4U" target="_blank" rel="noopener">♪ Ainda Bem</a>
+
+<div class="lightbox" id="lightbox">
+  <button class="close" aria-label="Fechar">×</button>
+  <img id="lightboxImg" src="" alt="Foto ampliada">
+</div>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('show');observer.unobserve(e.target)}})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const lightbox=document.getElementById('lightbox');
+const lbImg=document.getElementById('lightboxImg');
+document.querySelectorAll('.gallery-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    lbImg.src=item.querySelector('img').src;
+    lightbox.classList.add('open');
+  });
+});
+function closeLb(){lightbox.classList.remove('open');lbImg.src=''}
+lightbox.addEventListener('click',e=>{if(e.target===lightbox||e.target.classList.contains('close'))closeLb()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+</script>
+</body>
+</html>
